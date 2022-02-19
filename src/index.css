@@ -8,8 +8,11 @@ body {
 }
 
 .form-container {
-	background-color: lightblue;
-	width: 75%;
+	background-color: #485461;
+	background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 150px;
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
@@ -20,10 +23,18 @@ body {
 
 input {
 	border: 2px solid #f0f0f0;
+	background-color: aliceblue;
 	border-radius: 5px;
 	width: 100%;
 	padding: 10px;
 	margin: 20px 0 20px 0;
+}
+
+.box {
+	background-color: #485461;
+	background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 textarea {
@@ -40,8 +51,8 @@ textarea:focus {
 }
 
 img {
-	width: 150px;
-	max-height: 300px;
+	width: 100%;
+	height: auto;
 	margin-bottom: 1rem;
 	border: 1px solid darkslategrey;
 	box-shadow: 5px 5px 10px black;
@@ -69,8 +80,9 @@ label {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	row-gap: 2em;
 }
 
 .movie-item {
@@ -78,7 +90,7 @@ label {
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
 	font-weight: bold;
 }
 
@@ -96,6 +108,11 @@ label {
 	font-size: 0.75rem;
 	color: silver;
 	text-align: center;
+}
+
+.reviews {
+	color: silver;
+	text-align: right;
 }
 
 .w-6 {
