@@ -5,6 +5,8 @@ body {
 	background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	color: silver;
+	font-size: 1em;
 }
 
 .form-container {
@@ -37,6 +39,12 @@ input {
 	background-attachment: fixed;
 }
 
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 textarea {
 	border: 2px solid #f0f0f0;
 	border-radius: 5px;
@@ -58,11 +66,28 @@ img {
 	box-shadow: 5px 5px 10px black;
 }
 
+h2,
+h3,
+h4,
+h5 {
+	color: #5bc0de;
+}
+
+hr {
+	color: #5bc0de;
+}
+
 label {
-	color: silver;
+	color: #5bc0de;
+	margin-top: 2%;
 }
 
 .stars {
+	font-size: 1.5em;
+}
+
+.star-rating {
+	color: goldenrod;
 	font-size: 1.5em;
 }
 
@@ -82,7 +107,7 @@ label {
 	flex-wrap: wrap;
 	align-items: flex-start;
 	justify-content: space-evenly;
-	row-gap: 2em;
+	row-gap: 3rem;
 }
 
 .movie-item {
@@ -95,7 +120,6 @@ label {
 }
 
 .movie-display::before {
-	padding: 1rem;
 	color: #606060;
 }
 
@@ -105,14 +129,27 @@ label {
 
 .movie-listing {
 	width: 250px;
-	font-size: 0.75rem;
 	color: silver;
 	text-align: center;
+	font-size: 1.5rem;
 }
 
-.reviews {
+.review-footer {
 	color: silver;
 	text-align: right;
+	font-style: italic;
+}
+
+.review-text {
+	color: silver;
+	text-align: left;
+	font-size: 1.15rem;
+}
+
+.review-form {
+	border: 1px solid silver;
+	border-radius: 10px;
+	padding: 5%;
 }
 
 .w-6 {
@@ -120,8 +157,4 @@ label {
 }
 .h-6 {
 	height: 1.5em;
-}
-
-h4 {
-	color: cyan;
 }
