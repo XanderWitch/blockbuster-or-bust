@@ -1,79 +1,92 @@
 import React, { useState } from 'react';
-import StarRating from './StarRating';
 import movieArray from './MovieArray';
 
-function ReviewForm() {
-	const [inputFields, setInputFields] = useState([
-		{ username: '', review: '', rating: '' },
-	]);
+const review = { movieArray };
 
-	const handleFormChange = (index, event) => {
-		let data = [...inputFields];
-		data[index][event.target.name] = event.target.value;
-		setInputFields(data);
+export default function ReviewForm({ addReview }) {
+	const [review, setReview] = useState({
+		username: '',
+		currentDate: '',
+		review: '',
+		starRating: '',
+	});
+
+	const handleChange = (event) => {
+		setReview({
+			...review,
+			[event.target.name]: event.target.value,
+		});
 	};
 
-	const current = new Date();
-	const date = `${current.getDate()}/${
-		current.getMonth() + 1
-	}/${current.getFullYear()}`;
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		addReview(review);
+		setReview({
+			username: '',
+			currentDate: '',
+			review: '',
+			starRating: '',
+		});
+	};
 
 	return (
 		<div className='review-form'>
-			<h5 className='text-center mt-2'>Add Your Own Review</h5>
-
-			<form>
-				{inputFields.map((input, index) => (
-					<div key={index}>
-						<label>Name</label>
-						<input
-							type='text'
-							placeholder='Your Preferred Name'
-							name='username'
-							value={input.username}
-							required
-							onChange={(event) =>
-								handleFormChange(index, event)
-							}
-						/>
-						<br />
-						<label>Date Viewed</label>
-						<input
-							type='date'
-							name='currentDate'
-							placeholder='Date'
-							defaultValue={date}
-							required
-							onChange={(event) =>
-								handleFormChange(index, event)
-							}
-						/>
-						<label>Your Review</label>
-						<textarea
-							rows='10'
-							placeholder='Blockbuster or bust? Type your review here...'
-							name='review'
-							value={input.review}
-							required
-							onChange={(event) =>
-								handleFormChange(index, event)
-							}
-						/>
-						<br />
-						<label>Your Rating</label>
-						<StarRating />
-						<div className='button'>
-							<button
-								type='submit'
-								className='btn btn-info mt-2'>
-								Submit
-							</button>
-						</div>
-					</div>
-				))}
+			<form onSubmit={handleSubmit}>
+				<div>
+					<h3 className='text-center mt-2 p-2'>
+						Add Your Own Review
+					</h3>
+				</div>
+				<div>
+					<input
+						type='text'
+						name='username'
+						placeholder='Your Preferred Name'
+						value={review.username}
+						onChange={handleChange}
+					/>
+				</div>
+				<div>
+					<input
+						type='date'
+						name='currentDate'
+						placeholder='Date You Watched This Movie'
+						value={review.currentDate}
+						onChange={handleChange}
+					/>
+				</div>
+				<div>
+					<input
+						type='text'
+						name='review'
+						rows='10'
+						placeholder='Blockbuster or bust? Type your review here...'
+						value={review.review}
+						onChange={handleChange}
+					/>
+				</div>
+				<div>
+					<p className='review-text mt-3 text-center'>
+						Your Rating
+					</p>
+					<select
+						name='starRating'
+						className='star'
+						value={review.starRating}
+						onChange={handleChange}>
+						<option value='1'>★</option>;
+						<option value='2'>★★</option>;
+						<option value='3'>★★★</option>;
+						<option value='4'>★★★★</option>;
+						<option value='5'>★★★★★</option>;
+					</select>
+				</div>
+				<div>
+					<button className='btn btn-info mt-3'>
+						Submit Review
+					</button>
+				</div>
 			</form>
 		</div>
 	);
 }
-
-export default ReviewForm;

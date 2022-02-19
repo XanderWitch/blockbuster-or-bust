@@ -9,7 +9,7 @@ const Movie = () => {
 				<React.Fragment>
 					<div
 						key={movie.id}
-						className='movie-item col col-2 mt-5'>
+						className='movie-item col col-3 mt-5'>
 						<img
 							className='card-img-top'
 							src={movie.movieImage}
@@ -23,24 +23,26 @@ const Movie = () => {
 							Rated {movie.movieRating}
 							<br />
 						</p>
-						<h4 className='text-center mt-5'>~REVIEWS~</h4>
+						<h4 className='review-list text-center mt-5'>
+							~REVIEWS~
+						</h4>
 						<div>
 							{movie.reviews?.map((review) => (
 								<div key={review.id}>
 									<p>
 										<span className='star-rating'>
-											{review.movieRating}
+											{review.starRating}
 										</span>
 										,{' '}
 										<span className='review-text'>
 											"{review.review}"
 										</span>
-										<p className='review-footer'>
-											<span className='review-footer'>
-												—{review.username},{' '}
-												{review.currentDate}
-											</span>
-										</p>
+									</p>
+									<p className='review-footer'>
+										<span className='review-footer'>
+											—{review.username},{' '}
+											{review.currentDate}
+										</span>
 									</p>
 								</div>
 							))}
