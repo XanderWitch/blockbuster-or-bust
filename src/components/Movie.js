@@ -21,13 +21,13 @@ const Movie = () => {
 						Rated {movie.movieRating}
 						<br />
 					</p>
-				</div>
-				// {movieArray.reviews.map((review) => (
-				// 	<div key={review.id}>
-				// 		{review.movieRating}<br />
-				// 		"{review.review}"<br />
-				// 		—{review.username}, {review.currentDate}
-				// 	</div>
+				</div>,
+				{movie.reviews.map((review) => (
+					<div key={review.id}>
+						{review.movieRating}<br />
+						"{review.review}"<br />
+						—{review.username}, {review.currentDate}
+					</div>
 			))}
 
 			<>
