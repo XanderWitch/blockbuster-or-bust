@@ -6,7 +6,8 @@ import ReviewForm from './ReviewForm';
 const Movie = () => {
 	return (
 		<div className='movie-display'>
-			{movieArray.map((movie) => (
+			<ReactFragment>
+				{movieArray.map((movie) => (
 				<div key={movie.id} className='movie-item mt-5 p-2'>
 					<img
 						className='card-img-top'
@@ -21,15 +22,17 @@ const Movie = () => {
 						Rated {movie.movieRating}
 						<br />
 					</p>
-				</div>,
-				{movie.reviews.map((review) => (
-					<div key={review.id}>
-						{review.movieRating}<br />
-						"{review.review}"<br />
-						—{review.username}, {review.currentDate}
-					</div>
-			))}
-
+				</div>
+					{movie.reviews.map((review) => (
+						<div key={review.id}>
+							{review.movieRating}<br />
+							"{review.review}"<br />
+							—{review.username}, {review.currentDate}
+						</div>
+					))
+					}
+			</ReactFragment>
+				))
 			<>
 				<ReviewForm />
 			</>
