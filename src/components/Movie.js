@@ -9,9 +9,9 @@ const Movie = () => {
 				<React.Fragment>
 					<div
 						key={movie.id}
-						className='movie-item col col-3 mt-5'>
+						className='movie-item mt-5 col col-3'>
 						<img
-							className='card-img-top'
+							// className='card-img-top'
 							src={movie.movieImage}
 							alt='movie poster'
 						/>

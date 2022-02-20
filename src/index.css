@@ -6,7 +6,6 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	color: silver;
-	font-size: 1em;
 }
 
 .form-container {
@@ -29,7 +28,6 @@ input {
 	border-radius: 5px;
 	width: 100%;
 	padding: 10px;
-	margin: 20px 0 20px 0;
 }
 
 .box {
@@ -84,12 +82,10 @@ label {
 
 .star {
 	color: goldenrod;
-	font-size: 1.5em;
 }
 
 .star-rating {
 	color: goldenrod;
-	font-size: 1.5em;
 }
 
 .flex {
@@ -129,10 +125,8 @@ label {
 }
 
 .movie-listing {
-	width: 250px;
 	color: silver;
 	text-align: center;
-	font-size: 1.5rem;
 }
 
 .review-list {
@@ -148,13 +142,14 @@ label {
 .review-text {
 	color: silver;
 	text-align: left;
-	font-size: 1.15rem;
 }
 
 .review-form {
 	border: 1px solid silver;
 	border-radius: 10px;
 	padding: 5%;
+	width: 100%;
+
 	text-align: center;
 }
 
