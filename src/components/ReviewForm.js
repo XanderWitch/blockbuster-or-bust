@@ -83,7 +83,7 @@ export default function ReviewForm({ addReview }) {
 					</select>
 				</div>
 				<div>
-					<button className='btn btn-info mt-3'>
+					<button type='submit' className='btn btn-info mt-3'>
 						Submit Review
 					</button>
 				</div>
