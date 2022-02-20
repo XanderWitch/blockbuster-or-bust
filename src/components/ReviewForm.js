@@ -12,6 +12,7 @@ export default function ReviewForm({ addReview }) {
 	});
 
 	const handleChange = (event) => {
+		event.preventDefault();
 		setReview({
 			...review,
 			[event.target.name]: event.target.value,
