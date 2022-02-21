@@ -12,7 +12,7 @@ import TheTenCommandmentsImage from '../images/TheTenCommandments.jpg';
 
 const movieArray = [
 	{
-		id: 'GoneWithTheWind',
+		id: 'GoneWithTheWindMov',
 		movieName: 'Gone With the Wind',
 		releaseDate: 1939,
 		movieGenre: 'Drama',
@@ -50,7 +50,7 @@ const movieArray = [
 		],
 	},
 	{
-		id: 'Avatar',
+		id: 'AvatarMov',
 		movieName: 'Avatar',
 		releaseDate: 2009,
 		movieGenre: 'Science Fiction',
@@ -58,7 +58,7 @@ const movieArray = [
 		movieImage: AvatarImage,
 	},
 	{
-		id: 'Titanic',
+		id: 'TitanicMov',
 		movieName: 'Titanic',
 		releaseDate: 1997,
 		movieGenre: 'Romance/Disaster',
@@ -66,7 +66,7 @@ const movieArray = [
 		movieImage: TitanicImage,
 	},
 	{
-		id: 'StarWars',
+		id: 'StarWarsMov',
 		movieName: 'Star Wars',
 		releaseDate: 1977,
 		movieGenre: 'Epic Space Opera',
@@ -74,7 +74,7 @@ const movieArray = [
 		movieImage: StarWarsImage,
 	},
 	{
-		id: 'AvengersEndgame',
+		id: 'AvengersEndgameMov',
 		movieName: 'Avengers: EndGame',
 		releaseDate: 2019,
 		movieGenre: 'Superhero/Science Fiction',
@@ -82,7 +82,7 @@ const movieArray = [
 		movieImage: AvengersEndgameImage,
 	},
 	{
-		id: 'TheSoundOfMusic',
+		id: 'TheSoundOfMusicMov',
 		movieName: 'The Sound of Music',
 		releaseDate: 1965,
 		movieGenre: 'Musical Drama',
@@ -90,7 +90,7 @@ const movieArray = [
 		movieImage: TheSoundOfMuicImage,
 	},
 	{
-		id: 'ETTheExtraTerrestrial',
+		id: 'ETTheExtraTerrestrialMov',
 		movieName: 'E.T. the Extra-Terrestrial',
 		releaseDate: 1982,
 		movieGenre: 'Science Fiction',
@@ -98,7 +98,7 @@ const movieArray = [
 		movieImage: ETTheExtraTerrestrialImage,
 	},
 	{
-		id: 'TheTenCommandments',
+		id: 'TheTenCommandmentsMov',
 		movieName: 'The Ten Commandments',
 		releaseDate: 1956,
 		movieGenre: 'Epic Religious Drama',
@@ -106,7 +106,7 @@ const movieArray = [
 		movieImage: TheTenCommandmentsImage,
 	},
 	{
-		id: 'DoctorZhivago',
+		id: 'DoctorZhivagoMov',
 		movieName: 'Doctor Zhivago',
 		releaseDate: 1965,
 		movieGenre: 'Epic Historical/Romantic Drama',
@@ -114,7 +114,7 @@ const movieArray = [
 		movieImage: DoctorZhivagoImage,
 	},
 	{
-		id: 'StarWarsTheForceAwakens',
+		id: 'StarWarsTheForceAwakensMov',
 		movieName: 'Star Wars: The Force Awakens',
 		releaseDate: 2015,
 		movieGenre: 'Epic Space Opera',

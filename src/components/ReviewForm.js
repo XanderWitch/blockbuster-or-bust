@@ -3,7 +3,7 @@ import movieArray from './MovieArray';
 
 const review = { movieArray };
 
-export default function ReviewForm({ addReview }) {
+export default function ReviewForm() {
 	const [review, setReview] = useState({
 		username: '',
 		currentDate: '',
@@ -21,7 +21,6 @@ export default function ReviewForm({ addReview }) {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		addReview(review);
 		setReview({
 			username: '',
 			currentDate: '',
@@ -32,7 +31,7 @@ export default function ReviewForm({ addReview }) {
 
 	return (
 		<div className='review-form'>
-			<form onSubmit={handleSubmit}>
+			<form>
 				<div>
 					<h3 className='text-center mt-2 p-2'>
 						Add Your Own Review
@@ -57,10 +56,10 @@ export default function ReviewForm({ addReview }) {
 					/>
 				</div>
 				<div>
-					<input
-						type='text'
+					<textarea
 						name='review'
 						rows='10'
+						className='form-control'
 						placeholder='Blockbuster or bust? Type your review here...'
 						value={review.review}
 						onChange={handleChange}
@@ -83,10 +82,23 @@ export default function ReviewForm({ addReview }) {
 					</select>
 				</div>
 				<div>
-					<button type='submit' className='btn btn-info mt-3'>
-						Submit Review
+					<button
+						type='submit'
+						className='btn btn-info mt-3'
+						onChange={handleChange}
+						onSubmit={handleSubmit}>
+						{console.log(movieArray)}
+						Submit
 					</button>
 				</div>
+				{movieArray.reviews?.map(function (review, index) {
+					return (
+						<div key={review.index}>
+							{review.username} {review.currentDate}{' '}
+							{review.review} {review.starRating}
+						</div>
+					);
+				})}
 			</form>
 		</div>
 	);

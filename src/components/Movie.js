@@ -28,7 +28,7 @@ const Movie = () => {
 						</h4>
 						<div>
 							{movie.reviews?.map((review) => (
-								<div key={review.id}>
+								<div key={review.index}>
 									<p>
 										<span className='star-rating'>
 											{review.starRating}
