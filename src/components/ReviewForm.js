@@ -11,7 +11,7 @@ export default function ReviewForm() {
 		starRating: '',
 	});
 
-	const handleChange = (event) => {
+	const handleChange = (event, index) => {
 		event.preventDefault();
 		setReview({
 			...review,
@@ -21,6 +21,8 @@ export default function ReviewForm() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+		movieArray.reviews?.push(review);
+
 		setReview({
 			username: '',
 			currentDate: '',
@@ -91,7 +93,7 @@ export default function ReviewForm() {
 						Submit
 					</button>
 				</div>
-				{movieArray.reviews?.map(function (review, index) {
+				{movieArray.reviews?.map(function (review) {
 					return (
 						<div key={review.index}>
 							{review.username} {review.currentDate}{' '}
