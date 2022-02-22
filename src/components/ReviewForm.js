@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import movieArray from './MovieArray';
 
-const review = { movieArray };
-
 export default function ReviewForm() {
 	const [review, setReview] = useState({
 		username: '',
@@ -11,10 +9,11 @@ export default function ReviewForm() {
 		starRating: '',
 	});
 
-	const handleChange = (event, index) => {
+	const handleChange = (event) => {
 		event.preventDefault();
+
 		setReview({
-			...review,
+			...movieArray.reviews,
 			[event.target.name]: event.target.value,
 		});
 	};
@@ -33,7 +32,7 @@ export default function ReviewForm() {
 
 	return (
 		<div className='review-form'>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<div>
 					<h3 className='text-center mt-2 p-2'>
 						Add Your Own Review
@@ -85,17 +84,14 @@ export default function ReviewForm() {
 				</div>
 				<div>
 					<button
-						type='submit'
 						className='btn btn-info mt-3'
-						onChange={handleChange}
-						onSubmit={handleSubmit}>
-						{console.log(movieArray)}
-						Submit
+						onClick={handleSubmit}>
+						{console.log(movieArray)}Submit
 					</button>
 				</div>
 				{movieArray.reviews?.map(function (review) {
 					return (
-						<div key={review.index}>
+						<div key={review.id}>
 							{review.username} {review.currentDate}{' '}
 							{review.review} {review.starRating}
 						</div>
