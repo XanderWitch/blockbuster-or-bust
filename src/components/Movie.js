@@ -5,7 +5,7 @@ import ReviewForm from './ReviewForm';
 const Movie = () => {
 	return (
 		<div className='movie-display'>
-			{movieArray.map((movie) => (
+			{movieArray?.map((movie) => (
 				<div key={movie.id} className='movie-item mt-5 col col-3'>
 					<img
 						// className='card-img-top'

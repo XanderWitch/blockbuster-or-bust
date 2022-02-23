@@ -10,7 +10,7 @@ import StarWarsTheForceAwakensImage from '../images/StarWarsTheForceAwakens.jpg'
 import TheSoundOfMuicImage from '../images/TheSoundOfMusic.jpg';
 import TheTenCommandmentsImage from '../images/TheTenCommandments.jpg';
 
-const movieArray = [
+export const movieArray = [
 	{
 		id: 'GoneWithTheWindMov',
 		movieName: 'Gone With the Wind',
