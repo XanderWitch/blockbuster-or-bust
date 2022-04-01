@@ -1,0 +1,4 @@
+1. incorporate API in place of array
+2. update form to push to API
+3. add button to upload images for each movie
+4. limit image sizes (too big as is)
